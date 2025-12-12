@@ -7,9 +7,9 @@ on:
 jobs:
   run-bot:
     runs-on: ubuntu-latest
-    
+
     steps:
-      - name: Baixando arquivos
+      - name: Baixar arquivos
         uses: actions/checkout@v3
 
       - name: Configurar Node.js
@@ -23,4 +23,5 @@ jobs:
       - name: Rodar o bot
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: node index.js
