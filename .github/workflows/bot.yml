@@ -1,11 +1,11 @@
-name: Start Discord Bot
+name: Iniciar Bot do Discord
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  run-bot:
+  executar-bot:
     runs-on: ubuntu-latest
 
     steps:
